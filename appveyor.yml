@@ -1,5 +1,10 @@
 environment:
   matrix:
+  - ARTIFACT_NAME: v8js_vc15_php-7.2_%Platform%_nts.zip
+    OUTDIR: Release
+    CONFIGURE_EXTRA: --disable-zts
+    V8_ASSETS: V8-5.8.283.31-%Platform%.zip
+    PHP_VERSION: 7.2.7
   - ARTIFACT_NAME: v8js_vc15_php-7.3_%Platform%_nts.zip
     OUTDIR: Release
     CONFIGURE_EXTRA: --disable-zts
