@@ -63,7 +63,7 @@ build_script:
   - echo Building PHP [%PHP_VERSION%]
   - '%PHP_SDK%\bin\phpsdk_setvars'
   - buildconf
-  - configure --disable-all --enable-cli --with-v8js --with-iconv=yes --with-libxml=yes --with-dom=yes %CONFIGURE_EXTRA%
+  - configure --disable-all --enable-cli --with-v8js --with-iconv=yes --with-libxml=yes --with-dom=yes --enable-json=static %CONFIGURE_EXTRA%
   - nmake
 
 after_build:
