@@ -3,21 +3,21 @@ environment:
   - ARTIFACT_NAME: v8js_vc15_php-7.3_%Platform%_ts.zip
     OUTDIR: Release_TS
     V8_ASSETS: V8-7.0.276.11-vc15-%Platform%.zip
-    PHP_VERSION: 7.3.0alpha3
+    PHP_VERSION: 7.3.0RC1
   - ARTIFACT_NAME: v8js_vc15_php-7.3_%Platform%_nts.zip
     OUTDIR: Release
     CONFIGURE_EXTRA: --disable-zts
     V8_ASSETS: V8-7.0.276.11-vc15-%Platform%.zip
-    PHP_VERSION: 7.3.0alpha3
+    PHP_VERSION: 7.3.0RC1
   - ARTIFACT_NAME: v8js_vc15_php-7.2_%Platform%_ts.zip
     OUTDIR: Release_TS
     V8_ASSETS: V8-7.0.276.11-vc15-%Platform%.zip
-    PHP_VERSION: 7.2.7
+    PHP_VERSION: 7.2.10
   - ARTIFACT_NAME: v8js_vc15_php-7.2_%Platform%_nts.zip
     OUTDIR: Release
     CONFIGURE_EXTRA: --disable-zts
     V8_ASSETS: V8-7.0.276.11-vc15-%Platform%.zip
-    PHP_VERSION: 7.2.7
+    PHP_VERSION: 7.2.10
 
   PHP_SDK: c:\projects\php-sdk
 
@@ -41,6 +41,7 @@ install:
   - cd deps
   - curl -fSL -o %V8_ASSETS% "https://phpdev.toolsforresearch.com/%V8_ASSETS%"
   - 7z.exe x %V8_ASSETS%
+  - dir
   - cd ..
   - curl -fSL -o "php-%PHP_VERSION%.tar.gz" "https://github.com/php/php-src/archive/php-%PHP_VERSION%.tar.gz"
   - ren php php-src-php-%PHP_VERSION%
