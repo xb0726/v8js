@@ -30,10 +30,10 @@ platform:
 
 install:
   - cd %PHP_SDK%
-  - curl -fSL -o php-sdk-2.1.7beta1.zip "https://github.com/Microsoft/php-sdk-binary-tools/archive/php-sdk-2.1.7beta1.zip"
-  - 7z.exe x php-sdk-2.1.7beta1.zip
-  - move /y php-sdk-binary-tools-php-sdk-2.1.7beta1\* .
-  - for /R /D %%f in (php-sdk-binary-tools-php-sdk-2.1.7beta1\*) do move /y %%f .
+  - curl -fSL -o php-sdk-2.1.9beta1.zip "https://github.com/Microsoft/php-sdk-binary-tools/archive/php-sdk-2.1.9beta1.zip"
+  - 7z.exe x php-sdk-2.1.9beta1.zip
+  - move /y php-sdk-binary-tools-php-sdk-2.1.9beta1\* .
+  - for /R /D %%f in (php-sdk-binary-tools-php-sdk-2.1.9beta1\*) do move /y %%f .
   - call bin\phpsdk_setvars.bat
   - call bin\phpsdk_buildtree.bat v8js-ci
   - cd v8js-ci\vc15\%Platform%
